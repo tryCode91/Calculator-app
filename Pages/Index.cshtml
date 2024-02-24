@@ -1,0 +1,88 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h1 class="display-4"></h1>
+    <div class="calculator shadow border border-5 border-info rounded-3 d-flex flex-column text-center align-items-center">
+        
+        <div class="mt-2 display-container d-flex align-items-end border border-4 border-light rounded-3">
+            <div class="display ms-auto">
+                <div class="total mt-3">0</div>
+                <div class="display-number">0</div>
+            </div>
+        </div>
+        <div class="d-flex justify-content-center align-items-center flex-row mt-3">
+            <div class="col-2 button-plus" onclick="GetOperation('^');">
+                <div class="btn shadow operation-buttons"><span class="sign">x<sup>2</sup></span></div>
+            </div>
+            <div class="col-2" onclick="GetOperation('ec');">
+                <div class="btn shadow operation-buttons"><span class="sign">EC</span></div>
+            </div>
+            <div class="col-2" onclick="GetOperation('c');">
+                <div class="btn shadow operation-buttons"><span class="sign">C</span></div>
+            </div>
+            <div class="col-2" onClick="GetOperation('b');">
+                <div class="btn shadow operation-buttons"><img src="images/backbutton.png" class="back-button"></div>
+            </div>
+        </div>
+        <div class="d-flex justify-content-center align-items-center flex-row operation-buttons-container">
+            <div class="col-2" onclick="GetNumber('9');">
+                <div class="btn shadow operation-buttons"><span class="sign">9</span></div>
+            </div>
+            <div class="col-2" onClick="GetNumber('8');">
+                <div class="btn shadow operation-buttons"><span class="sign">8</span></div>
+            </div>
+            <div class="col-2" onclick="GetNumber('7');">
+                <div class="btn shadow operation-buttons"><span class="sign">7</span></div>
+            </div>
+            <div class="col-2" onclick="GetOperation('÷');">
+                <div class="btn shadow operation-buttons"><span class="sign">&#x00F7;</span></div>
+            </div>
+        </div>
+        <div class="d-flex justify-content-center align-items-center flex-row operation-buttons-container">
+            <div class="col-2" onclick="GetNumber('6');">
+                <div class="btn shadow operation-buttons"><span class="sign">6</span></div>
+            </div>
+            <div class="col-2" onclick="GetNumber('5');">
+                <div class="btn shadow operation-buttons"><span class="sign">5</span></div>
+            </div>
+            <div class="col-2" onclick="GetNumber('4');">
+                <div class="btn shadow operation-buttons"><span class="sign">4</span></div>
+            </div>
+            <div class="col-2" onclick="GetOperation('-');">
+                <div class="btn shadow operation-buttons"><span class="sign">-</span></div>
+            </div>
+        </div>
+        <div class="d-flex justify-content-center align-items-center flex-row operation-buttons-container">
+            <div class="col-2" onclick="GetNumber('3');">
+                <div class="btn shadow operation-buttons"><span class="sign">3</span></div>
+            </div>
+            <div class="col-2" onclick="GetNumber('2');">
+                <div class="btn shadow operation-buttons"><span class="sign">2</span></div>
+            </div>
+            <div class="col-2" onclick="GetNumber('1');">
+                <div class="btn shadow operation-buttons"><span class="sign">1</span></div>
+            </div>
+            <div class="col-2" onclick="GetOperation('+');">
+                <div class="btn shadow operation-buttons"><span class="sign">+</span></div>
+            </div>
+        </div>
+        <div class="d-flex justify-content-center align-items-center flex-row operation-buttons-container">
+            <div class="col-2" onclick="GetOperation('+/-');">
+                <div class="btn shadow operation-buttons"><span class="sign">+/-</span></div>
+            </div>
+            <div class="col-2" onclick="GetNumber('0');">
+                <div class="btn shadow operation-buttons"><span class="sign">0</span></div>
+            </div>
+            <div class="col-2" onclick="GetOperation('x');">
+                <div class="btn shadow operation-buttons"><span class="sign">x</span></div>
+            </div>
+            <div class="col-2" onclick="GetOperation('=');">
+                <div class="btn shadow operation-buttons"><span class="sign">=</span></div>
+            </div>
+        </div>
+    </div>
+</div>
